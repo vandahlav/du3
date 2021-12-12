@@ -1,0 +1,340 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2021-12-06T13:41:39Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/290026925",
+        "addr:city": "Praha",
+        "addr:conscriptionnumber": "52",
+        "addr:country": "CZ",
+        "addr:housenumber": "52/8",
+        "addr:place": "Staré Město",
+        "addr:postcode": "11000",
+        "addr:street": "Valentinská",
+        "addr:streetnumber": "8",
+        "addr:suburb": "Praha 1",
+        "amenity": "restaurant",
+        "name": "U Parlamentu",
+        "opening_hours": "Mo-Su 11:00-23:00",
+        "phone": "+420 721 415 747",
+        "ref:ruian:addr": "21715157",
+        "source:addr": "cuzk:ruian",
+        "source:loc": "survey",
+        "website": "http://uparlamentu.cz/",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4165887,
+          50.0882606
+        ]
+      },
+      "id": "node/290026925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/290026926",
+        "addr:city": "Praha 1",
+        "addr:conscriptionnumber": "93",
+        "addr:housenumber": "93/10",
+        "addr:postcode": "11000",
+        "addr:street": "Veleslavínova",
+        "amenity": "restaurant",
+        "cuisine": "pizza",
+        "email": "veleslavinova@pizzadonna.cz",
+        "name": "Pizzeria Donna",
+        "opening_hours": "Mo-Su 11:00-23:00",
+        "phone": "+420 222 321 937",
+        "website": "https://www.pizzadonna.cz/",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4164882,
+          50.087785
+        ]
+      },
+      "id": "node/290026926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296442967",
+        "addr:conscriptionnumber": "241",
+        "addr:housenumber": "241/12",
+        "addr:postcode": "11000",
+        "addr:street": "Zlatá",
+        "addr:streetnumber": "12",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21717265"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.418034,
+          50.0850944
+        ]
+      },
+      "id": "node/296442967"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296443467",
+        "addr:conscriptionnumber": "77",
+        "addr:housenumber": "77/2",
+        "addr:place": "Staré Město",
+        "addr:postcode": "11000",
+        "addr:street": "Dvořákovo nábřeží",
+        "addr:streetnumber": "2",
+        "ref:ruian:addr": "21715289"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4154731,
+          50.0907287
+        ]
+      },
+      "id": "node/296443467"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296443543",
+        "addr:conscriptionnumber": "621",
+        "addr:housenumber": "621/10",
+        "addr:postcode": "11000",
+        "addr:street": "Masná",
+        "addr:streetnumber": "10",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21722463"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4239465,
+          50.0890376
+        ]
+      },
+      "id": "node/296443543"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296443734",
+        "addr:conscriptionnumber": "313",
+        "addr:housenumber": "313/2",
+        "addr:postcode": "11000",
+        "addr:street": "Bartolomějská",
+        "addr:streetnumber": "2",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21718245"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4161197,
+          50.0822364
+        ]
+      },
+      "id": "node/296443734"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296443960",
+        "addr:conscriptionnumber": "263",
+        "addr:housenumber": "263/5",
+        "addr:postcode": "11000",
+        "addr:street": "Konviktská",
+        "addr:streetnumber": "5",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21717567"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4158708,
+          50.0833647
+        ]
+      },
+      "id": "node/296443960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296444426",
+        "addr:conscriptionnumber": "916",
+        "addr:housenumber": "916/5",
+        "addr:postcode": "11000",
+        "addr:street": "Kozí",
+        "addr:streetnumber": "5",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21725560"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4224732,
+          50.0900869
+        ]
+      },
+      "id": "node/296444426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296445067",
+        "addr:conscriptionnumber": "784",
+        "addr:housenumber": "784/7",
+        "addr:postcode": "11000",
+        "addr:street": "Haštalské náměstí",
+        "addr:streetnumber": "7",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21724571"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4248352,
+          50.0914124
+        ]
+      },
+      "id": "node/296445067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296445113",
+        "addr:conscriptionnumber": "49",
+        "addr:housenumber": "49/8",
+        "addr:postcode": "11000",
+        "addr:street": "Kaprova",
+        "addr:streetnumber": "8",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21715131"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4170779,
+          50.0881823
+        ]
+      },
+      "id": "node/296445113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296445248",
+        "addr:conscriptionnumber": "52",
+        "addr:housenumber": "52/6",
+        "addr:postcode": "11000",
+        "addr:street": "Kaprova",
+        "addr:streetnumber": "6",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21715149"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4168075,
+          50.0882512
+        ]
+      },
+      "id": "node/296445248"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296445301",
+        "addr:conscriptionnumber": "609",
+        "addr:housenumber": "609/2",
+        "addr:postcode": "11000",
+        "addr:street": "Dlouhá",
+        "addr:streetnumber": "2",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21722315"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.421798,
+          50.0885297
+        ]
+      },
+      "id": "node/296445301"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296445326",
+        "addr:conscriptionnumber": "186",
+        "addr:housenumber": "186/5",
+        "addr:postcode": "11000",
+        "addr:street": "Anenská",
+        "addr:streetnumber": "5",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21716439"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4150787,
+          50.0854609
+        ]
+      },
+      "id": "node/296445326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296445336",
+        "addr:conscriptionnumber": "915",
+        "addr:housenumber": "915/7",
+        "addr:postcode": "11000",
+        "addr:street": "Kozí",
+        "addr:streetnumber": "7",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21725551"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4224902,
+          50.0903064
+        ]
+      },
+      "id": "node/296445336"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/296445403",
+        "addr:conscriptionnumber": "345",
+        "addr:housenumber": "345/7",
+        "addr:postcode": "11000",
+        "addr:street": "Na Perštýně",
+        "addr:streetnumber": "7",
+        "source:addr": "uir_adr",
+        "uir_adr:ADRESA_KOD": "21718695"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4187204,
+          50.0829745
+        ]
+      },
+      "id": "node/296445403"
+      }
+    ]
+}
