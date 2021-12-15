@@ -43,6 +43,7 @@ with open("adresy.geojson", encoding="utf-8") as adresy_2, open("kontejnery.geoj
                 nejblizsi_vzdalenost = vzdalenost
         pocet_adres += 1
         suma_vzdalenosti += nejblizsi_vzdalenost
+        min_vzdalenosti_list.append(nejblizsi_vzdalenost)
     
         #ošetření, aby vzdálenost ke kontejneru nebyla delší, než 10 km
         if nejblizsi_vzdalenost > max_vzdalenost:
@@ -56,9 +57,14 @@ with open("adresy.geojson", encoding="utf-8") as adresy_2, open("kontejnery.geoj
             nejdelsi_vzdalenost = nejblizsi_vzdalenost
             adresa_ulice_max = feature ["properties"]["addr:street"]
             adresa_cp_max = feature ["properties"]["addr:housenumber"]
+
+        #výpočet mediánu
+        m = median(min_vzdalenosti_list)
             
     prumerna_vzdalenost = suma_vzdalenosti / pocet_adres
+    
 
 print(f"Průměrná vzdálenost ke kontejneru je {round(prumerna_vzdalenost)} m.")
 print(f"Nejdále to je ke kontejneru z adresy {adresa_ulice_max} {adresa_cp_max} a to {nejdelsi_vzdalenost} m.")
+print(f"Medián vzdáleností ke kontejnerů je {round(m)}.")
 
