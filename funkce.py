@@ -1,10 +1,5 @@
-from pyproj import Transformer
 import json
-
-def prevod_souradnic(x,y):
-    wgs2jtsk = Transformer.from_crs(4326,5514, always_xy=True)
-    souradnice = wgs2jtsk.transform(x,y)
-    return souradnice
+from json.decoder import JSONDecodeError
 
 def otevreni_souboru(soubor):
     try:
@@ -15,4 +10,7 @@ def otevreni_souboru(soubor):
         quit()
     except PermissionError:
         print("Program nemá přístup k zápisu výstupních souborů.")
+        quit()
+    except JSONDecodeError:
+        print("Načtený vstupní soubor není platný JSON.")
         quit()
