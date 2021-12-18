@@ -1,6 +1,8 @@
 # Domácí úkol 3 - vzdálenost ke kontejnerům na tříděný odpad
-# Zadání 
-Pro zvolenou množínu adresních bodů a množinu kontejnerů na tříděný odpad zjistěte průměrnou a maximální vzdálenost k nejbližšímu veřejnému kontejneru na tříděný odpad. Pro každý adresní bod tedy určete nejbližší veřejný kontejner na tříděný odpad a následně z těchto vzdáleností spočtěte průměr a maximum. Průměr a maximum vypište, pro maximum vypište i adresu, která má nejbližší veřejný kontejner nejdále.
+# Použití (vstupní data a výstupy)
+Jako vstupní data program načítá dva soubory GeJSON. Prvním je soubor adresy.geojson, kde jsou obsaženy adresy se souřadnicemi v souřadnicovém systému WGS-84. Druhým je soubor s názvem kontejnery.geojson. V něm jsou uložena data kontejnerů na tříděný odpad. Souřadnicovým systémem je zde S-JTSK. U vstupních dat pro adresy je v atributu addr:street uloženo jméno ulice a v atributu addr:housenumber číslo popisné. Stejně tak je i u souboru kontejnery uloženo v atributu PRISTUP, zda se jedná o veřejný (volně) kontejner a v atributu STATIONNAME je adresa příslušného kontjeneru.
+
+Výstupem programu je výpis informací o počtu načtených adresních bodů a kontejnerů. Dále dojde k vypsání průměrné nejkratší vzdálenosti k veřejnému kontejneru na tříděný odpad, adresy, která to má k nejbližšímu kontejneru nejdále (včetně hodnoty dané vzdálenosti) a nakonec mediánu vzdáleností. 
 
 # Zpracování 
 Program nejprve načte pomocí definované funkce dva vstupní soubory (geojson). Funkce na jejich otevírání byla spolu s ošetřením případných nekorektních vstupů vytvořena v souboru "funkce.py", odkud je také importována. Následně jsou inicializovány potřebné proměnné, konstanta maximální vzdálenosti (10 km) a transformátor pro převední souřadnic.
