@@ -23,36 +23,35 @@ wgs2jtsk = Transformer.from_crs(4326,5514, always_xy=True)
 kontejnery_list = []
 for feature in kontejnery["features"]:
     if feature ["properties"]["PRISTUP"] == "volně":
-        kontejnery_list.append(feature)   
+        kontejnery_list.append(feature)
 
 #načtení a převod adres 
 for feature in adresy ["features"]:
-    try:
-        feature["geometry"]["coordinates"] = list(wgs2jtsk.transform(*feature["geometry"]["coordinates"]))
-        x_a = feature["geometry"]["coordinates"][0]
-        y_a = feature["geometry"]["coordinates"][1]
-    except ValueError:
-        print(f"Nelze načíst obě souřadnice ze souboru.")
-        continue
 
     #vytvoření nového klíče a uložení do slovníku 
     adresa_ulice = feature ["properties"]["addr:street"]
     adresa_cp = feature ["properties"]["addr:housenumber"]
 
-    #výpočet nejkratší vzdálenosti z dané adresy ke kontejneru 
     try:
-        for feature in kontejnery_list:
+        feature["geometry"]["coordinates"] = list(wgs2jtsk.transform(*feature["geometry"]["coordinates"]))
+        x_a = feature["geometry"]["coordinates"][0]
+        y_a = feature["geometry"]["coordinates"][1]
+    except TypeError:
+        print(f"Nelze načíst obě souřadnice ze souboru u adresního bodu {adresa_ulice} {adresa_cp}.")
+
+    #výpočet nejkratší vzdálenosti z dané adresy ke kontejneru 
+    for feature in kontejnery_list:
+        kont_vyjm = feature["properties"]["STATIONNAME"]
+        try:
             x_k, y_k = feature["geometry"]["coordinates"]
             vzdalenost = int(sqrt((x_k - x_a)**2 + (y_k - y_a)**2))
 
-            #seznam_vzdalenosti.append(vzdalenost)
             if vzdalenost < nejblizsi_vzdalenost:
                 nejblizsi_vzdalenost = vzdalenost
 
-            kont_vyjimka = feature["properties"]["STATIONNAME"]  
-    except ValueError:
-        print("Chybně zadaná data u kontejneru na adrese {kont_vyjimka}.")
-        continue
+        except ValueError:
+            print(f"Chybně zadaná data u kontejneru na adrese {kont_vyjm}.")
+            continue
 
     suma_vzdalenosti += nejblizsi_vzdalenost
     min_vzdalenosti_list.append(nejblizsi_vzdalenost)
@@ -65,8 +64,6 @@ for feature in adresy ["features"]:
 
     #ošetření, aby vzdálenost ke kontejneru nebyla delší, než 10 km
     if nejblizsi_vzdalenost > MAX_VZDALENOST:
-        adresa_ulice = feature ["properties"]["addr:street"]
-        adresa_cp = feature ["properties"]["addr:housenumber"]
         print(f"Nejbližší vzdálenost ke kontejneru z adresy {adresa_ulice} {adresa_cp} je větší než 10 km. Program končí.")
         quit()
     
