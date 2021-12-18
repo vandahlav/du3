@@ -13,7 +13,6 @@ nejblizsi_vzdalenost = float('inf')
 suma_vzdalenosti = 0
 nejdelsi_vzdalenost = 0
 min_vzdalenosti_list = []
-pocet_kontejneru = 0
 max_vzdalenost = 0
 MAX_VZDALENOST = 10000
 
@@ -25,7 +24,6 @@ kontejnery_list = []
 for feature in kontejnery["features"]:
     if feature ["properties"]["PRISTUP"] == "volně":
         kontejnery_list.append(feature)   
-        pocet_kontejneru += 1 
 
 #načtení a převod adres 
 for feature in adresy ["features"]:
@@ -78,7 +76,7 @@ for feature in adresy ["features"]:
 prumerna_vzdalenost = suma_vzdalenosti / len(min_vzdalenosti_list)
 
 print(f"Bylo načteno {len(min_vzdalenosti_list)} adresních bodů.")
-print(f"Bylo načteno {pocet_kontejneru} veřejných kontejnerů na tříděný odpad.\n")
+print(f"Bylo načteno {len(kontejnery_list)} veřejných kontejnerů na tříděný odpad.\n")
 print(f"Průměrná vzdálenost ke kontejneru je {round(prumerna_vzdalenost)} m.")
 print(f"Nejdále to je ke kontejneru z adresy {adresa_ulice_max} {adresa_cp_max} a to {nejdelsi_vzdalenost} m.\n")
 print(f"Medián vzdáleností ke kontejnerům je {round(m)} m.\n")
